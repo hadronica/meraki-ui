@@ -1,28 +1,7 @@
 import React from 'react';
 import './button.scss';
+import {ButtonProps} from './type';
 
-export interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
 
 /**
  * Primary UI component for user interaction
@@ -30,19 +9,30 @@ export interface ButtonProps {
 export const Button = ({
   primary = false,
   size = 'medium',
-  backgroundColor,
   label,
+  customClass,
+  fullwidth,
+  typeStyle,
+  iconRight,
+  iconLeft,
+  disabled,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'meraki-button--primary' : 'meraki-button--secondary';
+  const width = fullwidth ? 'meraki-button--fullwidth' : '';
+  const type = typeStyle === 'outline' ? 'meraki-button--outline' : 'meraki-button--solid';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      disabled={disabled}
+      className={['meraki-button', `meraki-button--${size}`, mode,width,type].join(' ')}
       {...props}
     >
-      {label}
+      {iconLeft&&
+      <div className="meraki-button__iconLeft">{iconLeft}</div>}
+      <span>{label}</span>
+      {iconRight&&
+      <div className="meraki-button__iconRight">{iconRight}</div>}
     </button>
   );
 };

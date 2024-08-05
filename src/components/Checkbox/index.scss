@@ -1,0 +1,40 @@
+.meraki-checkbox{
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  &__text{
+    width: calc(100% - 32px);
+    p{
+      margin: 0;
+      padding: 0;
+      font-family: var(--rubik);
+      font-size: 14px;
+      font-weight: 400;
+      color: #00346A;
+      strong{
+      font-family: var(--rubik);
+      font-weight: 600;
+    }
+    }
+  }
+  &__check{
+    margin-right: 8px;
+    input{
+      display: none;
+    }
+    label{
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+      border-radius: 5px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border:1px solid var(--red);
+      &.checked{
+        background: var(--red);
+      }
+    }
+  }
+}

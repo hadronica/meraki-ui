@@ -1,0 +1,95 @@
+body{
+  background: #EAF9FF;
+}
+.meraki-error{
+  font-size: 10px;
+  color:red;
+  font-family: var(--rubik);
+  display: block;
+  margin-top: 8px;
+}
+.meraki-textfield{
+  min-width: 300px;
+ 
+  label{
+    font-family: var(--rubik);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--blueAlt);
+    text-rendering: geometricPrecision;
+  }
+  &__input{
+    display: flex;
+    background: white;
+    padding: 10px;
+    border-radius: 24px;
+    svg{
+      path{
+        fill: var(--blueAlt);
+      }
+    }
+    input{
+      font-family: var(--rubik);
+      border: 0px;
+      display: block;
+      outline: 0px;
+      border: 0px;
+      max-width: 100%;
+      width: 100%;
+      color: var(--blueAlt);
+      font-size: 14px;
+      line-height: 140%;
+      font-weight: 400;
+      text-rendering: geometricPrecision;
+      &::placeholder{
+        color: #A5B3BC;
+      }
+    }
+    &.error
+    {
+      border: 1px solid red;
+      
+      svg{
+        fill:red;
+        path{
+          fill:red;
+        }
+      }
+    }
+  }
+  &.meraki-textfield--small{
+   
+      
+    .meraki-textfield__input{
+      padding: 8px;
+     
+    }
+  }
+  &.meraki-textfield--large{
+  
+    .meraki-textfield__input{
+      padding: 12px;
+     
+    }
+  }
+  &.disabled{
+    .meraki-textfield__input{
+      background: var(--disabledInput);
+      color: #FFFFFF;
+
+      input{
+        background: var(--disabledInput);
+        color: #FFFFFF;
+        font-weight: 400;
+        &::placeholder{
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+  
+}
+

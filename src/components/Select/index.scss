@@ -1,0 +1,60 @@
+.meraki-select{
+  label{
+    font-family: var(--rubik);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--blueAlt);
+    text-rendering: geometricPrecision;
+  }
+  &__content{
+    position: relative;
+    label{
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      z-index: 2;
+    }
+    select{
+      min-width: 296px;
+      border: 0px;
+      appearance: none;
+      -webkit-appearance: none;
+      padding:10px;
+      border-radius: 12px;
+      position: relative;
+      font-size: 14px;
+      color: var(--blueAlt);
+      &::before{
+        content: '▼';
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        color: var(--blueAlt);
+      }
+    }
+    &.error{
+      select{
+        border: 1px solid red;
+      }
+    }
+    &.disabled{
+   
+
+  
+        select{
+          background: var(--disabled);
+          color: #FFFFFF;
+          font-weight: 400;
+          &::placeholder{
+            color: #FFFFFF;
+          }
+        }
+      
+    }
+  }
+}
