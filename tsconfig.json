@@ -1,19 +1,26 @@
 {
   "compilerOptions": {
-  "jsx": "react",
-  "target": "es2016",
-  "outDir": "dist",
-  "allowJs": true,
-  "skipLibCheck": true,
-  "strict": true,
-  "forceConsistentCasingInFileNames": true,
-  "module": "ES2020",
-  "allowSyntheticDefaultImports": true,
-  "moduleResolution": "Node",
-  "declaration": true,
-  "declarationDir": "dist"                             /* Skip type checking all .d.ts files. */
+    "composite": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": [
-        "stories"
-    ]
+  "include": ["src"]
 }

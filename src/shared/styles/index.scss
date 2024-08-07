@@ -1,0 +1,15 @@
+:root{
+  --red:#CD002B;
+  --white:#FFFFFF;
+  --blue:#0A2E48;
+  --rubik: 'Rubik', sans-serif;
+  --blueAlt:#00346A;
+  --disabled:#C1C3E0;
+  --disabledInput:#cecee8;
+
+}
+@import '_Select.scss';
+@import '_Button.scss';
+@import '_TextField.scss';
+@import '_TextArea.scss';
+@import '_Checkbox.scss';
