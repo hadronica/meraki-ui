@@ -96,7 +96,8 @@ export const WithCustom: Story = {
     label: "Correo USIL",
     type: "custom",
     iconLeft: HeartBlack(),
-    customMessageError: "El correo debe ser de usil"
+    customMessageError: "El correo debe ser de usil",
+    customClass: "newuser"
   },
   
 };

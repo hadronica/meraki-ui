@@ -29,6 +29,10 @@ export const button = cva("meraki-button", {
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>,VariantProps<typeof button> {
   /**
+   * Estado de carga
+   */
+  loading?: boolean;
+  /**
    * Principal o secundario
    */
   variant: 'primary'|'secondary';

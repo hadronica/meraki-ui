@@ -1,7 +1,7 @@
 import React from "react";
-//@ts-ignore
+
 import { TextFieldProps } from "./type";
-const TextField = ({label='example',value,placeholder,iconLeft,size,iconRight,type,password,onChange,error,readonly,pattern,customMessageError}: TextFieldProps): JSX.Element => {
+const TextField = ({label='example',value,placeholder,iconLeft,size,iconRight,type,password,onChange,error,readonly,pattern,customMessageError,customClass}: TextFieldProps): JSX.Element => {
   const [inputValue, setInputValue] = React.useState(value);
   const [typeInput, setTypeInput] = React.useState(password ? 'password' : 'text');
   const [haveError, setError] = React.useState('');
@@ -46,7 +46,7 @@ const TextField = ({label='example',value,placeholder,iconLeft,size,iconRight,ty
   const disabled = readonly ? 'disabled' : '';
   return (
     <>
-    <div className={["meraki-textfield",`meraki-textfield--${size}`,`${disabled&&'disabled'}`].join(" ")}>
+    <div className={["meraki-textfield",`meraki-textfield--${size||'large'}`,`${disabled&&'disabled'}`,`${customClass}`].join(" ")}>
       <label>{label}</label>
       <div className={`meraki-textfield__input ${(error|| haveError) &&'error'}`}>
         {iconLeft&&

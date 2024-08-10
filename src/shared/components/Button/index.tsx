@@ -10,6 +10,7 @@ import {button, ButtonProps} from './type';
   variant,
   size = 'medium',
   label,
+  loading,
   customClass,
   fullwidth,
   typeStyle,
@@ -27,7 +28,10 @@ import {button, ButtonProps} from './type';
     >
       {iconLeft&&
       <div className="meraki-button__iconLeft">{iconLeft}</div>}
+      {loading && <span>Loading...</span>}
+      {!loading&&
       <span>{label}</span>
+      }
       {iconRight&&
       <div className="meraki-button__iconRight">{iconRight}</div>}
     </button>
