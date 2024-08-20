@@ -1,4 +1,20 @@
 export interface TextAreaProps {
+        /**
+    * Cantidad máxima de caracteres
+    */
+   type?: 'onlyText' | 'Alphanumeric';
+        /**
+    * Cantidad máxima de caracteres
+    */
+      maxLength?: number;
+      /**
+    * Margen top
+    */
+      marginTop?: 16 | 24 | 32 | 40;
+      /**
+    * Margen Bottom
+    */
+   marginBottom?: 16 | 24 | 32 | 40;
     /**
    * Valor del placeholder
    */
@@ -27,7 +43,7 @@ export interface TextAreaProps {
    /**
    * Evento click del boton
    */
-  onChange?: any;
+  onChange?: (val:string) => void;
    /**
    * Mensaje de error personalizado
    */

@@ -1,8 +1,16 @@
 export interface CheckboxProps {
    /**
+    * Margen top
+    */
+   marginTop?: 16 | 24 | 32 | 40;
+   /**
+ * Margen Bottom
+ */
+marginBottom?: 16 | 24 | 32 | 40;
+   /**
    * Evento click del boton
    */
-  onClick: any;
+  onClick: (value: boolean) => void;
      /**
    * ¿El boton es solido o bordeado?
    */

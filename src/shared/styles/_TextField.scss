@@ -11,7 +11,30 @@ body{
 }
 .meraki-textfield{
   min-width: 300px;
- 
+ &.mt-16{
+    margin-top: 16px;
+  }
+  &.mt-24{
+    margin-top: 24px;
+  }
+  &.mt-32{
+    margin-top: 32px;
+  }
+  &.mt-40{
+    margin-top: 40px;
+  }
+  &.mb-16{
+    margin-bottom: 16px;
+  }
+  &.mb-24{
+    margin-bottom: 24px;
+  }
+  &.mb-32{
+    margin-bottom: 32px;
+  }
+  &.mb-40{
+    margin-bottom: 40px;
+  }
   label{
     font-family: var(--rubik);
     font-weight: 600;
@@ -78,15 +101,15 @@ body{
   }
   &.disabled{
     .meraki-textfield__input{
-      background: var(--disabledInput);
-      color: #FFFFFF;
+      background: var(--disabledBg);
+      color: var(--disabledText);
 
       input{
-        background: var(--disabledInput);
-        color: #FFFFFF;
+        background: var(--disabledBg);
+        color: var(--disabledText);
         font-weight: 400;
         &::placeholder{
-          color: #FFFFFF;
+          color: var(--disabledText);
         }
       }
     }

@@ -15,6 +15,32 @@
   font-weight: 400;
   justify-content: center;
   text-rendering: geometricPrecision;
+  transition: ease-in-out .3s all;
+  cursor: pointer;
+  &.mt-16{
+    margin-top: 16px;
+  }
+  &.mt-24{
+    margin-top: 24px;
+  }
+  &.mt-32{
+    margin-top: 32px;
+  }
+  &.mt-40{
+    margin-top: 40px;
+  }
+  &.mb-16{
+    margin-bottom: 16px;
+  }
+  &.mb-24{
+    margin-bottom: 24px;
+  }
+  &.mb-32{
+    margin-bottom: 32px;
+  }
+  &.mb-40{
+    margin-bottom: 40px;
+  }
   span{
     display: block;
   }
@@ -57,6 +83,7 @@
     font-size: 14px;
     line-height: 14px;
     min-width: 296px;
+    min-height: 52px;
     .meraki-button__iconLeft{
  
       width: 20px;
@@ -78,10 +105,14 @@
     font-size: 14px;
     line-height: 14px;
     min-width: 300px;
+    min-height: 55px;
   }
   &--primary{
     background: var(--red);
     color: var(--white);
+    &:hover{
+      background: var(--redHover);
+    }
     &.meraki-button--outline{
       background: var(--white);
       color: var(--red);
@@ -103,6 +134,10 @@
       color: var(--blue);
       border: 1px solid var(--blue);
     }
+    &:hover{
+      background: var(--blueAlt);
+      color: white!important;
+    }
   }
   &--fullwidth{
     width: 100%;
@@ -113,5 +148,20 @@
     color: #ffffff;
     cursor: not-allowed;
   }
-  
+  &--loading{
+    &.meraki-button--primary{
+      background: var(--red);
+      color: var(--white);
+      &:hover{
+        background: var(--red);
+      }
+    }
+    &.meraki-button--secondary{
+      background: var(--blue);
+      color: var(--white);
+      &:hover{
+        background: var(--blue);
+      }
+    }
+  }
 }

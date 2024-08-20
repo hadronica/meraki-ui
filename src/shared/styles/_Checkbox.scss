@@ -2,6 +2,30 @@
   display: flex;
   flex-flow: wrap;
   align-items: center;
+  &.mt-16{
+    margin-top: 16px;
+  }
+  &.mt-24{
+    margin-top: 24px;
+  }
+  &.mt-32{
+    margin-top: 32px;
+  }
+  &.mt-40{
+    margin-top: 40px;
+  }
+  &.mb-16{
+    margin-bottom: 16px;
+  }
+  &.mb-24{
+    margin-bottom: 24px;
+  }
+  &.mb-32{
+    margin-bottom: 32px;
+  }
+  &.mb-40{
+    margin-bottom: 40px;
+  }
   &__text{
     width: calc(100% - 32px);
     p{

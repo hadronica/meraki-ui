@@ -1,5 +1,17 @@
 
 export interface TextFieldProps {
+      /**
+    * Extensión máxima del input
+    */
+  maxLength?: number;
+    /**
+    * Margen top
+    */
+   marginTop?: 16 | 24 | 32 | 40;
+      /**
+    * Margen Bottom
+    */
+   marginBottom?: 16 | 24 | 32 | 40;
   /**
  * Valor del placeholder
  */
@@ -28,7 +40,7 @@ customClass?: string;
  /**
  * Evento click del boton
  */
-onChange?: any;
+onChange?: (value: string) => void;
 
  /**
  * Icono a la derecha del input

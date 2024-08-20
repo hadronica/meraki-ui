@@ -68,3 +68,13 @@ export const Disabled: Story = {
   }
 };
 
+export const Maxlength: Story = {
+  args: {
+    value: "",
+    placeholder: "Detalle la acción que realizó",
+    label: "Describe brevemente la acción",
+    size: "large",
+    maxLength: 150
+  }
+};
+

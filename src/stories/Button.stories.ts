@@ -155,3 +155,26 @@ export const Disabled: Story = {
 
 
 
+export const Loading: Story = {
+  args: {
+    variant: "primary",
+    label: "Button",
+    typeStyle: "solid",
+    isLoading: true
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

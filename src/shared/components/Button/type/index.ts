@@ -22,16 +22,39 @@ export const button = cva("meraki-button", {
     defaultVariant:{
       variant:'primary',
       typeStyle:'solid'
+    },
+    loading:{
+      loading:'meraki-button--loading'
+    },
+    marginTop:{
+      16:'mt-16',
+      24:'mt-24',
+      32:'mt-32',
+      40:'mt-40'
+    },
+    marginBottom:{
+      16:'mb-16',
+      24:'mb-24',
+      32:'mb-32',
+      40:'mb-40'
     }
   }
 });  
 
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>,VariantProps<typeof button> {
+      /**
+    * Margen top
+    */
+      marginTop?: 16 | 24 | 32 | 40;
+      /**
+    * Margen Bottom
+    */
+   marginBottom?: 16 | 24 | 32 | 40;
   /**
    * Estado de carga
    */
-  loading?: boolean;
+  isLoading?: boolean;
   /**
    * Principal o secundario
    */

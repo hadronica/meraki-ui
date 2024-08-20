@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Meta, StoryObj } from '@storybook/react';
 import  {Select}  from '../main';
 
@@ -39,10 +40,11 @@ const options = [
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
   args: {
+    placeholder: 'Selecciona una opción',
     options: options,
     label: '¿Qué tipo de acción hiciste?',
     onChange: (e:any)=>console.log(e),
-    value:{label: "Voluntariado", value: "Voluntariado"},
+    value:"Voluntariado",
     name: "typeAction"
   },
 };
@@ -50,6 +52,7 @@ export const Default: Story = {
 
 export const Error: Story = {
   args: {
+    placeholder: 'Selecciona una opción',
     options: [{
       "value": "Voluntariado",
       "label": "Voluntariado"
@@ -62,12 +65,7 @@ export const Error: Story = {
     }],
 
     label: "¿Qué tipo de acción hiciste?",
-
-    value: {
-      "label": "Voluntariado",
-      "value": "Voluntariado"
-    },
-
+    value: "Voluntariado",
     name: "typeAction",
     error: "Completa este campo"
   }
@@ -86,14 +84,9 @@ export const Disabled: Story = {
       "value": "Ayuda a personas mayores",
       "label": "Ayuda a personas mayores"
     }],
-
     label: "¿Qué tipo de acción hiciste?",
-
-    value: {
-      "label": "Voluntariado",
-      "value": "Voluntariado"
-    },
-
+    value: 'Voluntariado',
+    placeholder: 'Selecciona una opción',
     name: "typeAction",
     readonly: true
   }

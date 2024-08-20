@@ -1,5 +1,17 @@
 export interface SelectProps {
     /**
+    * Margen top
+    */
+    marginTop?: 16 | 24 | 32 | 40;
+    /**
+    * Margen Bottom
+    */
+    marginBottom?: 16 | 24 | 32 | 40;
+      /**
+   * Name de la indicación del modal
+   */
+    placeholder: string;
+    /**
    * Name del Select
    */
     name: string;
@@ -11,7 +23,7 @@ export interface SelectProps {
   /**
    * Valor del select
    */
-  value: {label:string,value:string};
+  value: string;
   /**
    * ¿El select es de solo lectura?
    */
@@ -25,7 +37,7 @@ export interface SelectProps {
    /**
    * Evento click del boton
    */
-  onChange?: any;
+  onChange?: (value: string) => void;
 
   /**
    * Error del select

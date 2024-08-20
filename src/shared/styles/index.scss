@@ -1,10 +1,13 @@
 :root{
   --red:#CD002B;
+  --redHover:#de0937;
   --white:#FFFFFF;
   --blue:#0A2E48;
   --rubik: 'Rubik', sans-serif;
   --blueAlt:#00346A;
   --disabled:#C1C3E0;
+  --disabledText:#91919c;
+  --disabledBg:#ededfe;
   --disabledInput:#cecee8;
 
 }
@@ -13,3 +16,5 @@
 @import '_TextField.scss';
 @import '_TextArea.scss';
 @import '_Checkbox.scss';
+@import '_Modal.scss';
+@import '_Title.scss';
