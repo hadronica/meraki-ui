@@ -2,7 +2,7 @@
   "name": "@luzhox/meraki",
   "private": false,
   "description": "Libreria de meraki",
-  "version": "3.3.2",
+  "version": "3.4.5",
   "type": "module",
   "files": [
     "dist"

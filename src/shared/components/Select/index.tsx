@@ -4,7 +4,7 @@ import Modal from '../Modal';
 /**
  * Primary UI component for user interaction
  */
-const Select = ({ options, value, onChange,label,marginTop,marginBottom,readonly,name,error,placeholder}:SelectProps) => {
+const Select = ({ options, value,heightAndWidthIcon, onChange,label,marginTop,marginBottom,readonly,name,error,placeholder}:SelectProps) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [selectValue, setSelectValue] = React.useState(value || placeholder);
     const handleChange = (e:string) => {
@@ -34,7 +34,10 @@ const Select = ({ options, value, onChange,label,marginTop,marginBottom,readonly
       <Modal title={placeholder} isOpen={isOpen} onClose={()=> setIsOpen(false)} >
         <div className="meraki-select__container">
         {options.map((option) => (
-          <button key={option.value} onClick={()=>{handleChange(option.value)}}>{option.label}</button>
+          <button key={option.value} onClick={()=>{handleChange(option.value)}}>
+            {option.icon&&<img className="meraki-select__icon" src={option.icon} width={heightAndWidthIcon||20} height={heightAndWidthIcon||20} style={{marginRight:8}}/>}
+            {option.label}
+            </button>
         ))}
         </div>
         </Modal>

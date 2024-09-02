@@ -20,7 +20,7 @@ const Modal = ({ children, isOpen, onClose,title }:ModalProps) => {
             &times;
           </span>
         </div>
-        <div className="modal-content__title"><Title title={title} type="h3"/></div>
+        <div className="modal-content__title"><Title title={title} type="h4"/></div>
         <div className="modal-content__body">
         {children}
         </div>

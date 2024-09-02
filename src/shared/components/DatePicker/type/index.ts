@@ -1,5 +1,9 @@
 
 export interface DatePickerProps {
+    /**
+    * Fecha máxima
+    */
+  maxDate?: string;
       /**
     * Margen top
     */

@@ -1,11 +1,17 @@
+import React from 'react';
 import { CheckboxProps } from './type';
 
-const Checkbox = ({  checked, onClick,children,marginTop,marginBottom }:CheckboxProps) => {
+const Checkbox = ({  checked, onClick,children,marginTop,error,marginBottom }:CheckboxProps) => {
+  const [haveError, setError] = React.useState('');
 
   const handleClick = () => {
     onClick(!checked);
+    if(error){
+      setError(error);
+    }
   }
   return (
+    <>
     <div className={`meraki-checkbox ${marginTop?`mt-${marginTop}`:''} ${marginBottom?`mb-${marginBottom}`:''}`}>
       <div className="meraki-checkbox__check">
         <input type="checkbox" id="checkbox" defaultChecked={checked}/>
@@ -17,6 +23,8 @@ const Checkbox = ({  checked, onClick,children,marginTop,marginBottom }:Checkbox
       </div>
       <div className="meraki-checkbox__text">{children}</div>
     </div>
+        {(error || haveError)&&<div className="meraki-error">{error || haveError}</div>}
+        </>
   );
 
 }

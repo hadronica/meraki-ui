@@ -16,6 +16,7 @@ const TextField = ({label='example',maxLength,value,marginTop,marginBottom,place
       return
     }
     if(type === 'onlyLetters' && !/^[a-zA-Z\s]*$/.test(e.target.value)){
+    
       return
     }
     if(type === 'email' ){
@@ -43,6 +44,17 @@ const TextField = ({label='example',maxLength,value,marginTop,marginBottom,place
         setError('');
       }
     }
+    if(pattern){
+      const custom = e.target.value;
+      const validateCustom = new RegExp(pattern);
+      if(!validateCustom.test(custom)){
+        setError(customMessageError||'Formato no valido');
+      }else{
+        setError('');
+        
+      }
+    }
+    
     onChange&&onChange(e.target.value);
     setInputValue(e.target.value);
     

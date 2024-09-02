@@ -43,7 +43,9 @@
     flex-flow: wrap;
     width: 100%;
     button{
-      display: block;width: 100%;
+      display: flex;
+      align-items: center;
+      width: 100%;
       appearance: none;
       -webkit-appearance: none;
       background: white;

@@ -1,4 +1,8 @@
 export interface CheckboxProps {
+     /**
+    * Error de checkbox
+    */
+  error?: string;
    /**
     * Margen top
     */

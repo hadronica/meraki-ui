@@ -1,5 +1,10 @@
 export interface SelectProps {
     /**
+    * Tamaño de icono en caso tuviera
+    */
+
+  heightAndWidthIcon?: number;
+    /**
     * Margen top
     */
     marginTop?: 16 | 24 | 32 | 40;
@@ -19,7 +24,7 @@ export interface SelectProps {
     /**
    * Opciones del select
    */
-    options: {label:string,value:string}[];
+    options: {label:string,value:string,icon?:string}[];
   /**
    * Valor del select
    */
