@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { TextFieldProps } from "./type";
-const TextField = ({label='example',maxLength,value,marginTop,marginBottom,placeholder,iconLeft,size,iconRight,type,password,onChange,error,readonly,pattern,customMessageError,customClass}: TextFieldProps): JSX.Element => {
+const TextField = ({label='example',InputRef,maxLength,value,marginTop,marginBottom,placeholder,iconLeft,size,iconRight,type,password,onChange,error,readonly,pattern,customMessageError,customClass}: TextFieldProps): JSX.Element => {
   const [inputValue, setInputValue] = React.useState(value);
   const [typeInput, setTypeInput] = React.useState(password ? 'password' : 'text');
   const [haveError, setError] = React.useState('');
@@ -67,7 +67,7 @@ const TextField = ({label='example',maxLength,value,marginTop,marginBottom,place
       <div className={`meraki-textfield__input ${(error|| haveError) &&'error'}`}>
         {iconLeft&&
         <div className="meraki-button__iconLeft">{iconLeft}</div>}
-        <input type={typeInput} maxLength={maxLength} value={inputValue} placeholder={placeholder||''} disabled={readonly}  onChange={(e)=>handleChange(e)}/>
+        <input ref={InputRef}  type={typeInput} maxLength={maxLength} value={inputValue} placeholder={placeholder||''} disabled={readonly}  onChange={(e)=>handleChange(e)}/>
         {iconRight&&
         <div className="meraki-button__iconRight">{iconRight}</div>}
         {password&&

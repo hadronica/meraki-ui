@@ -1,9 +1,16 @@
 
 export interface DatePickerProps {
     /**
-    * Fecha máxima
+    * Click Picker
     */
-  maxDate?: string;
+  onClickEvent?:()=>void;
+
+      /**
+    * Ref
+    */
+  inputref?: React.RefObject<HTMLInputElement>;
+  
+
       /**
     * Margen top
     */

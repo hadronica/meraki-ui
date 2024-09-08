@@ -1,5 +1,10 @@
+import { ForwardedRef } from "react";
 
 export interface TextFieldProps {
+     /**
+    * Ref
+    */
+  InputRef?: ForwardedRef<HTMLInputElement>;
       /**
     * Extensión máxima del input
     */
